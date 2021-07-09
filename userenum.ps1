@@ -29,11 +29,11 @@ Write-Output "failed to execute query"
 try
 {
 Invoke-WebRequest https://github.com/sense-of-security/ADRecon/blob/master/ADRecon.ps1 -OutFile ADRecon.ps1
-Invoke-Expression ADRecon.ps1 | Add-Content -Path .\userenum.txt
+Invoke-Expression "./ADRecon.ps1" | Add-Content -Path .\userenum.txt
 }
 catch
 {
-Write-Output "failed to execute query"
+Write-Output "failed to execute Adrecon.ps1"
 }
 try
 {
