@@ -2,7 +2,6 @@
 try
 {
 net user /domain | Add-Content -Path .\userenum.txt
-net group /domain | Add-Content -Path .\userenum.txt
 }
 catch
 {
