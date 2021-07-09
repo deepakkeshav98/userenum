@@ -1,3 +1,4 @@
+"user enum on domain" > .\userenum.txt
 try
 {
 net user /domain | Add-Content -Path .\userenum.txt
